@@ -46,4 +46,26 @@ GET request to `/weather/<id>/`:
 
 - returns a record with the given id
 - if the matching record exists, the response code is 200 and the response body is the matching object
-- if there is no record in the collection with the given id, the response code is 404
+- if there is no record in the collection with the given id, the response code is 404<br><br>
+## ******************* QUESTION_RESPONSE *****************
+
+A monolithic application is not the best solution for the Cornershop application due to the fact that we do not know, among the many processes running simultaneously, who is in control.
+
+Instead, splitting central bank data into microservices would be a better solution.<br><br>
+
+<img src="/home/gary/Documents/personal/tests/1b84b19a-872f-4dbb-9588-aff6eb5ce263/WhatsApp Image 2022-02-14 at 01.51.54.jpeg" alt="cornershop high level structure"/><br><br>
+
+Each microservice would have its own database, and it would be possible to better manage the application, in addition to allowing the scalability of new markets/branches and customers.
+
+Stores and branches need to be separate microservices, since there is a price for the stores (official) and another one practiced in the branches. In addition to these, customers, products, shoppers and schedules need to be separated.
+
+All of these could communicate directly, and would be a better solution than monolithic too, but a better architectural pattern would be event-based communication.
+
+For example: A customer makes an appointment for a purchase from the supermarket. The microservice of that customer's branch needs to be informed of this purchase, in order to be able to separate the products involved. In addition, it is necessary to register this event in another service, so that later, close to that appointment, a shopper can be informed and be able to make the purchase for the customer.
+
+
+To scale the application, a store and branch orchestrator is needed, always ready to add a new store/branch, update the product catalog (events) and update the application (customers) with the new purchase options.
+
+In this way, several processors could run simultaneously (asynchronously), in addition to making the application more reliable and scalable.
+
+
