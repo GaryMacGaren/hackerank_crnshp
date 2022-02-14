@@ -2,7 +2,7 @@ from django.db import models
 from jsonfield import JSONField
 
 
-class Wheather(models.Model):
+class Weather(models.Model):
     date = models.DateField()
     lat = models.FloatField()
     lon = models.FloatField()
