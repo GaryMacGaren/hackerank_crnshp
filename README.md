@@ -53,7 +53,7 @@ A monolithic application is not the best solution for the Cornershop application
 
 Instead, splitting central bank data into microservices would be a better solution.<br><br>
 
-<img src="/home/gary/Documents/personal/tests/1b84b19a-872f-4dbb-9588-aff6eb5ce263/WhatsApp Image 2022-02-14 at 01.51.54.png" alt="cornershop high level structure"/><br><br>
+<img src="WhatsAppImage.png" alt="cornershop high level structure"/><br><br>
 
 Each microservice would have its own database, and it would be possible to better manage the application, in addition to allowing the scalability of new markets/branches and customers.
 
